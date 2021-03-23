@@ -1,53 +1,24 @@
 package studyapplication;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-import javax.swing.JOptionPane;
-import java.util.ArrayList;
-
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/**
+ *
+ * @author harjafff
+ */
 public class quizGUI extends javax.swing.JFrame {
 private StartingMenu firstWindow; 
-    int questionIndex = 0;
-                ArrayList <String> questions = new ArrayList();
-            ArrayList <String> mc1 = new ArrayList();
-            ArrayList <String> mc2 = new ArrayList();
-            ArrayList <String> mc3 = new ArrayList();
-            ArrayList <String> mc4 = new ArrayList();
-            ArrayList <Integer> correctIndex = new ArrayList();
-
     /**
      * Creates new form quizGUI
      */
     public quizGUI(StartingMenu m) {
         initComponents();
         firstWindow = m;
-        File f = new File("src\\studyapplication\\questions.txt");
-        try {
-
-            
-            Scanner s = new Scanner(f);
-            
-            for (int i = 0; i < 10; i++) {
-                
-                questions.add(i, s.nextLine());
-                mc1.add(i, s.nextLine());
-                mc2.add(i, s.nextLine());
-                mc3.add(i, s.nextLine());
-                mc4.add(i, s.nextLine());
-                correctIndex.add(i, Integer.parseInt(s.nextLine()));
-            }
-        } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-        
-        change(questionIndex);
-
     }
-    
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -69,7 +40,6 @@ private StartingMenu firstWindow;
         jProgressBar1 = new javax.swing.JProgressBar();
         menuBTN = new javax.swing.JButton();
         btnNext = new javax.swing.JButton();
-        questionText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -103,11 +73,6 @@ private StartingMenu firstWindow;
         });
 
         btnNext.setText("Next");
-        btnNext.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNextActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -119,11 +84,8 @@ private StartingMenu firstWindow;
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(option3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(questionText, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(32, Short.MAX_VALUE))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
@@ -152,9 +114,7 @@ private StartingMenu firstWindow;
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
-                    .addComponent(questionText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -193,11 +153,6 @@ private StartingMenu firstWindow;
         this.setVisible(false);
     }//GEN-LAST:event_menuBTNActionPerformed
 
-    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
-        questionIndex += 1;
-        change(questionIndex);
-    }//GEN-LAST:event_btnNextActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -215,14 +170,5 @@ private StartingMenu firstWindow;
     private javax.swing.JRadioButton option3;
     private javax.swing.JRadioButton option4;
     private javax.swing.ButtonGroup options;
-    private javax.swing.JLabel questionText;
     // End of variables declaration//GEN-END:variables
-
-    private void change(int questionIndex) {
-        questionText.setText(questions.get(questionIndex));
-        option1.setText(mc1.get(questionIndex));
-        option2.setText(mc2.get(questionIndex));
-        option3.setText(mc3.get(questionIndex));
-        option4.setText(mc4.get(questionIndex));
-    }
 }
