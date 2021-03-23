@@ -56,6 +56,11 @@ StartingMenu firstWindow;
         jLabel2.setText("Feedback:");
 
         jProgressBar1.setBackground(new java.awt.Color(255, 255, 255));
+        jProgressBar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jProgressBar1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,6 +111,10 @@ StartingMenu firstWindow;
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jProgressBar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jProgressBar1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jProgressBar1MouseClicked
 
     /**
      * @param args the command line arguments
