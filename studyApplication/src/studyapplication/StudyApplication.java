@@ -1,6 +1,7 @@
 /*
 Aidan Goodyer
-
+Harjas Sran
+Caroline Widdecombe
 
  */
 package studyapplication;
