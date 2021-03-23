@@ -12,7 +12,7 @@ package studyapplication;
 public class NotesGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form NotesGUI
+     * Creates new form NotesGUIdfgdfgdfg
      */
     public NotesGUI() {
         initComponents();
