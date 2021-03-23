@@ -12,7 +12,8 @@ package studyapplication;
  */
 public class StartingMenu extends javax.swing.JFrame {
     
-    private NotesGUI window2; 
+    private NotesGUI window2;
+    private quizGUI window3; 
 
     /**
      * Creates new form StartingMenu
@@ -47,6 +48,11 @@ public class StartingMenu extends javax.swing.JFrame {
 
         btnQuiz.setForeground(new java.awt.Color(102, 102, 255));
         btnQuiz.setText("Quiz");
+        btnQuiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQuizActionPerformed(evt);
+            }
+        });
 
         btnExit.setForeground(new java.awt.Color(102, 102, 255));
         btnExit.setText("Exit");
@@ -98,6 +104,15 @@ public class StartingMenu extends javax.swing.JFrame {
        this.setVisible(false); 
         
     }//GEN-LAST:event_btnNotesActionPerformed
+
+    private void btnQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuizActionPerformed
+        if(window3==null){
+         window3= new quizGUI(this); 
+       }
+       
+       window3.setVisible(true);
+       this.setVisible(false); 
+    }//GEN-LAST:event_btnQuizActionPerformed
 
     /**
      * @param args the command line arguments
