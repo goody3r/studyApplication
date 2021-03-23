@@ -1,1 +1,60 @@
-add the 10 MC questions for the quiz into here with the answers as well
+Who developed the “Gantt Chart”?
+Steve Gantt
+Joseph Gantt
+Henry Gantt
+John Gantt
+2
+What does “UML” stand for?
+Unified Modeling Language
+Universal Modeling Language
+Unified Modeling Learnings
+Universal Modeling Learnings
+0
+Who Developed the “Waterfall Method”?
+Henry Gantt
+Dr Winston Royce
+Grace Hopper
+Harjas Sran
+1
+At which stage is it most expensive to correct an error?
+Maintenance
+Implementation
+Design 
+Analysis
+0
+What does “SDLC” stand for?
+Software Development life cycle
+Software Development learning centre
+Systems Development life cycle
+Systems Development learning centre
+0
+Which is NOT a stage in the Waterfall Model
+Analysis
+Implementation
+Integration
+Organization
+3
+What should be included in the analysis stage?
+Who is going to use the program
+How the interface should work
+What data should be stored
+All of the above
+3
+Designing a general flowchart is part of which stage of the waterfall model?
+Analysis
+Design
+Integration
+Maintenance
+1
+During which stage of the waterfall model does testing occur?
+Analysis
+Integration
+Implementation
+Maintenance
+1
+Bugs are fixed in which stage of the waterfall method?
+Analysis
+Integration
+Implementation
+Maintenance
+3
