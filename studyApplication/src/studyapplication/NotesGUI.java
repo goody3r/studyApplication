@@ -41,6 +41,7 @@ StartingMenu firstWindow;
             }
         });
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("hello, this is a test of the multi line text\narea!");
