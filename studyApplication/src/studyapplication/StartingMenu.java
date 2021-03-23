@@ -11,7 +11,7 @@ package studyapplication;
  * @author harja
  */
 public class StartingMenu extends javax.swing.JFrame {
-    
+    //test
     private NotesGUI window2;
     private quizGUI window3; 
 
