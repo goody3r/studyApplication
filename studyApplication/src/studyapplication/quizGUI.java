@@ -28,15 +28,31 @@ public class quizGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        options = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        option1 = new javax.swing.JRadioButton();
+        option2 = new javax.swing.JRadioButton();
+        option3 = new javax.swing.JRadioButton();
+        option4 = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
+        feedback = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Question:");
 
-        jRadioButton1.setText("jRadioButton1");
+        options.add(option1);
+
+        options.add(option2);
+
+        options.add(option3);
+
+        options.add(option4);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setText("Feedback:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -45,18 +61,33 @@ public class quizGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton1)
+                    .addComponent(feedback, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(option4)
+                    .addComponent(option3)
+                    .addComponent(option2)
+                    .addComponent(option1)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(739, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addComponent(jRadioButton1)
-                .addContainerGap(440, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addComponent(option1)
+                .addGap(18, 18, 18)
+                .addComponent(option2)
+                .addGap(18, 18, 18)
+                .addComponent(option3)
+                .addGap(18, 18, 18)
+                .addComponent(option4)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(feedback, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -67,7 +98,14 @@ public class quizGUI extends javax.swing.JFrame {
      */
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JTextField feedback;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JRadioButton option1;
+    private javax.swing.JRadioButton option2;
+    private javax.swing.JRadioButton option3;
+    private javax.swing.JRadioButton option4;
+    private javax.swing.ButtonGroup options;
     // End of variables declaration//GEN-END:variables
 }
