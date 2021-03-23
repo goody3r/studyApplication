@@ -10,7 +10,11 @@ package studyapplication;
  * @author harjafff
  */
 public class quizGUI extends javax.swing.JFrame {
-private StartingMenu firstWindow; 
+
+    private StartingMenu firstWindow;
+
+    private int currentQuestion = 0;
+
     /**
      * Creates new form quizGUI
      */
@@ -37,7 +41,7 @@ private StartingMenu firstWindow;
         option4 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         feedback = new javax.swing.JTextField();
-        jProgressBar1 = new javax.swing.JProgressBar();
+        progressBar = new javax.swing.JProgressBar();
         menuBTN = new javax.swing.JButton();
         btnNext = new javax.swing.JButton();
 
@@ -57,10 +61,10 @@ private StartingMenu firstWindow;
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Feedback:");
 
-        jProgressBar1.setBackground(new java.awt.Color(255, 255, 255));
-        jProgressBar1.addMouseListener(new java.awt.event.MouseAdapter() {
+        progressBar.setBackground(new java.awt.Color(255, 255, 255));
+        progressBar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jProgressBar1MouseClicked(evt);
+                progressBarMouseClicked(evt);
             }
         });
 
@@ -73,6 +77,11 @@ private StartingMenu firstWindow;
         });
 
         btnNext.setText("Next");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,7 +98,7 @@ private StartingMenu firstWindow;
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 79, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,21 +146,28 @@ private StartingMenu firstWindow;
                         .addGap(2, 2, 2)))
                 .addComponent(menuBTN)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jProgressBar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jProgressBar1MouseClicked
-        
-    }//GEN-LAST:event_jProgressBar1MouseClicked
+    private void progressBarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_progressBarMouseClicked
+
+    }//GEN-LAST:event_progressBarMouseClicked
 
     private void menuBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBTNActionPerformed
         firstWindow.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_menuBTNActionPerformed
+
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+        currentQuestion++;
+        progressBar.setValue(10 * currentQuestion);
+
+
+    }//GEN-LAST:event_btnNextActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,12 +179,12 @@ private StartingMenu firstWindow;
     private javax.swing.JTextField feedback;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JButton menuBTN;
     private javax.swing.JRadioButton option1;
     private javax.swing.JRadioButton option2;
     private javax.swing.JRadioButton option3;
     private javax.swing.JRadioButton option4;
     private javax.swing.ButtonGroup options;
+    private javax.swing.JProgressBar progressBar;
     // End of variables declaration//GEN-END:variables
 }
