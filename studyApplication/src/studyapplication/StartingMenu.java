@@ -112,6 +112,7 @@ public class StartingMenu extends javax.swing.JFrame {
        
        window3.setVisible(true);
        this.setVisible(false); 
+        System.out.println("");
     }//GEN-LAST:event_btnQuizActionPerformed
 
     /**
