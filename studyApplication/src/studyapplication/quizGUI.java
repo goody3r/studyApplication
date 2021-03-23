@@ -44,6 +44,7 @@ public class quizGUI extends javax.swing.JFrame {
         progressBar = new javax.swing.JProgressBar();
         menuBTN = new javax.swing.JButton();
         btnNext = new javax.swing.JButton();
+        lblCurrentQuestion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,6 +84,8 @@ public class quizGUI extends javax.swing.JFrame {
             }
         });
 
+        lblCurrentQuestion.setText("Question: 1/10");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -99,7 +102,9 @@ public class quizGUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 79, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addComponent(lblCurrentQuestion)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(option2)
@@ -144,9 +149,12 @@ public class quizGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnNext)
                         .addGap(2, 2, 2)))
-                .addComponent(menuBTN)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(menuBTN)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblCurrentQuestion))
                 .addGap(49, 49, 49))
         );
 
@@ -165,6 +173,7 @@ public class quizGUI extends javax.swing.JFrame {
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
         currentQuestion++;
         progressBar.setValue(10 * currentQuestion);
+        lblCurrentQuestion.setText("Question: " + currentQuestion+1 + "/10");
 
 
     }//GEN-LAST:event_btnNextActionPerformed
@@ -179,6 +188,7 @@ public class quizGUI extends javax.swing.JFrame {
     private javax.swing.JTextField feedback;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblCurrentQuestion;
     private javax.swing.JButton menuBTN;
     private javax.swing.JRadioButton option1;
     private javax.swing.JRadioButton option2;
