@@ -38,6 +38,7 @@ StartingMenu firstWindow;
         jLabel2 = new javax.swing.JLabel();
         feedback = new javax.swing.JTextField();
         jProgressBar1 = new javax.swing.JProgressBar();
+        aidan = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,6 +63,8 @@ StartingMenu firstWindow;
             }
         });
 
+        aidan.setText("Aidan");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -85,6 +88,10 @@ StartingMenu firstWindow;
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(79, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(aidan)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,7 +113,9 @@ StartingMenu firstWindow;
                 .addComponent(option4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(aidan)
+                .addGap(15, 15, 15))
         );
 
         pack();
@@ -121,6 +130,7 @@ StartingMenu firstWindow;
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton aidan;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JTextField feedback;
     private javax.swing.JLabel jLabel1;
