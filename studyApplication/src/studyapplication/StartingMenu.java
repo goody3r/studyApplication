@@ -11,6 +11,8 @@ package studyapplication;
  * @author harja
  */
 public class StartingMenu extends javax.swing.JFrame {
+    
+    private NotesGUI window2; 
 
     /**
      * Creates new form StartingMenu
