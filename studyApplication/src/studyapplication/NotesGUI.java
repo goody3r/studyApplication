@@ -10,12 +10,13 @@ package studyapplication;
  * @author aidan
  */
 public class NotesGUI extends javax.swing.JFrame {
-
-    /**
+StartingMenu firstWindow; 
+    /**fff
      * Creates new form NotesGUIdfgdfgdfg
      */
-    public NotesGUI() {
+    public NotesGUI(StartingMenu m) {
         initComponents();
+        firstWindow = m; 
     }
 
     /**
