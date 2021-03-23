@@ -39,6 +39,11 @@ public class StartingMenu extends javax.swing.JFrame {
 
         btnNotes.setForeground(new java.awt.Color(102, 102, 255));
         btnNotes.setText("Review Notes");
+        btnNotes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNotesActionPerformed(evt);
+            }
+        });
 
         btnQuiz.setForeground(new java.awt.Color(102, 102, 255));
         btnQuiz.setText("Quiz");
@@ -82,6 +87,12 @@ public class StartingMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnNotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotesActionPerformed
+       
+       
+        
+    }//GEN-LAST:event_btnNotesActionPerformed
 
     /**
      * @param args the command line arguments
