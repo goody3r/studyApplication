@@ -5,18 +5,18 @@ package studyapplication;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author harja
  */
 public class quizGUI extends javax.swing.JFrame {
-
+StartingMenu firstWindow; 
     /**
      * Creates new form quizGUI
      */
-    public quizGUI() {
+    public quizGUI(StartingMenu m) {
         initComponents();
+        firstWindow = m;
     }
 
     /**
@@ -37,6 +37,7 @@ public class quizGUI extends javax.swing.JFrame {
         option4 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         feedback = new javax.swing.JTextField();
+        jProgressBar1 = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,6 +55,8 @@ public class quizGUI extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Feedback:");
 
+        jProgressBar1.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -61,33 +64,44 @@ public class quizGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(feedback, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(option4)
-                    .addComponent(option3)
-                    .addComponent(option2)
-                    .addComponent(option1)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(option2)
+                            .addComponent(option1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(feedback, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(54, 54, 54))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(option4)
+                            .addComponent(option3)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(79, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addComponent(option1)
-                .addGap(18, 18, 18)
-                .addComponent(option2)
-                .addGap(18, 18, 18)
-                .addComponent(option3)
-                .addGap(18, 18, 18)
-                .addComponent(option4)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(feedback, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(option1)
+                        .addGap(18, 18, 18)
+                        .addComponent(option2))
+                    .addComponent(feedback, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(option3)
+                .addGap(18, 18, 18)
+                .addComponent(option4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
         );
 
         pack();
@@ -96,12 +110,13 @@ public class quizGUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-  
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JTextField feedback;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JRadioButton option1;
     private javax.swing.JRadioButton option2;
     private javax.swing.JRadioButton option3;
