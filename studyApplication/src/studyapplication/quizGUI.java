@@ -136,7 +136,8 @@ private StartingMenu firstWindow;
     }//GEN-LAST:event_jProgressBar1MouseClicked
 
     private void menuBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBTNActionPerformed
-
+        firstWindow.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_menuBTNActionPerformed
 
     /**
