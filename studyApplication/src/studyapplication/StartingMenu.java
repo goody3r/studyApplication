@@ -50,6 +50,11 @@ public class StartingMenu extends javax.swing.JFrame {
 
         btnExit.setForeground(new java.awt.Color(102, 102, 255));
         btnExit.setText("Exit");
+        btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnExitMouseClicked(evt);
+            }
+        });
 
         lblStudyGuide.setFont(new java.awt.Font("Yuppy SC", 1, 36)); // NOI18N
         lblStudyGuide.setForeground(new java.awt.Color(0, 153, 0));
@@ -98,6 +103,10 @@ public class StartingMenu extends javax.swing.JFrame {
        this.setVisible(false); 
         
     }//GEN-LAST:event_btnNotesActionPerformed
+
+    private void btnExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_btnExitMouseClicked
 
     /**
      * @param args the command line arguments
