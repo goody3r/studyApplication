@@ -90,7 +90,12 @@ public class StartingMenu extends javax.swing.JFrame {
 
     private void btnNotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotesActionPerformed
        
+       if(window2==null){
+         window2= new NotesGUI(this); 
+       }
        
+       window2.setVisible(true);
+       this.setVisible(false); 
         
     }//GEN-LAST:event_btnNotesActionPerformed
 
