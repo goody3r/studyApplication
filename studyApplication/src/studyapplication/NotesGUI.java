@@ -5,18 +5,35 @@
  */
 package studyapplication;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aidan
  */
 public class NotesGUI extends javax.swing.JFrame {
 StartingMenu firstWindow; 
-    /**fff
-     * Creates new form NotesGUIdfgdfgdfg
-     */
+String notesText = "";
+
     public NotesGUI(StartingMenu m) {
         initComponents();
         firstWindow = m; 
+        File f = new File("src\\studyapplication\\notes.txt");
+        
+        try{
+            Scanner s = new Scanner(f);
+            while(s.hasNextLine()){
+                notesText +=  s.nextLine() + "\n";
+            }
+            notes.setText(notesText);
+        }
+        
+        catch(FileNotFoundException e){
+            JOptionPane.showMessageDialog(null, e);
+        }
     }
 
     /**
@@ -30,7 +47,7 @@ StartingMenu firstWindow;
 
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        notes = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,11 +58,11 @@ StartingMenu firstWindow;
             }
         });
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("hello, this is a test of the multi line text\narea!");
-        jScrollPane1.setViewportView(jTextArea1);
+        notes.setEditable(false);
+        notes.setColumns(20);
+        notes.setRows(5);
+        notes.setText("hello, this is a test of the multi line text\narea!");
+        jScrollPane1.setViewportView(notes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,6 +95,7 @@ StartingMenu firstWindow;
       this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
     /**
      * @param args the command line arguments
      */
@@ -86,6 +104,6 @@ StartingMenu firstWindow;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea notes;
     // End of variables declaration//GEN-END:variables
 }
