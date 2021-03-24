@@ -4,7 +4,7 @@ SDLC (Software Development Life Cycle):
 The process of software development
 
 Gantt charts:
-a useful tool to help project managers visualize the schedule and timeline of a project. The gantt chart was developed by mechanical engineer Henry Gantt, in the 1910’s.
+a useful tool to help project managers visualize the schedule and timeline of a project. The Gantt chart was developed by mechanical engineer Henry Gantt, in the 1910’s.
 
 UML (Unified Modeling Language):
 An easier way to explain Software.
