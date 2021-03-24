@@ -230,6 +230,16 @@ ArrayList<Integer> correctIndex = new ArrayList();
             correct();
         }
         
+        else if(correctIndex.get(questionIndex)==3 && option4.isSelected()){
+            correct();
+        }
+        
+        else{
+            if(questionIndex == 0){
+                feedback.setText("That is incorrect. Please review the Gantt Chart from the notes" );
+            }
+        }
+        
         //if correct. Feedback: Correct! Well Done!
         //if incorrect. Feedback: That was incorrect. Please review *the specific material* from the notes
     }//GEN-LAST:event_confirmBTNActionPerformed
