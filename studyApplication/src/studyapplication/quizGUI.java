@@ -218,6 +218,17 @@ ArrayList<Integer> correctIndex = new ArrayList();
 
     private void confirmBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmBTNActionPerformed
         //If the confirm button is pressed, give feedback and tell user whether they got the answer right or wrong
+        if (correctIndex.get(questionIndex)==0 && option1.isSelected()) {
+            correct();
+        }
+        
+        else if(correctIndex.get(questionIndex)==1 && option2.isSelected()){
+            correct();
+        }
+        
+        else if(correctIndex.get(questionIndex)==2 && option3.isSelected()){
+            correct();
+        }
         
         //if correct. Feedback: Correct! Well Done!
         //if incorrect. Feedback: That was incorrect. Please review *the specific material* from the notes
@@ -251,5 +262,9 @@ ArrayList<Integer> correctIndex = new ArrayList();
         option3.setText(mc3.get(i));
         option4.setText(mc4.get(i));
         
+    }
+
+    private void correct() {
+        feedback.setText("Correct! Well Done");
     }
 }
