@@ -13,8 +13,11 @@ Waterfall model:
 A software development process developed by Dr Winston Ryce.
 
 Stages of the waterfall model:
-Problem Statement - Establish the problem you are trying to solve
-Analysis  - Determining how the program should perform. The analysis should answer the following questions
+
+Problem Statement:
+Establish the problem you are trying to solve
+
+Analysis - Determining how the program should perform. The analysis should answer the following questions
     -How will they use the system?
     -Who is going to use the system?
     -How should the interface work?
@@ -25,10 +28,11 @@ Analysis  - Determining how the program should perform. The analysis should answ
 Design: 
 Break the problem up into manageable parts and decide on  how you plan on solving the problem. Creating a general flowchart is a good way of designing a system.
 
-Implementation - code the system
+Implementation:
+Code the system
 
 Integration: 
-test and compare the actual results to the projected results
+Test and compare the actual results to the projected results
 
 Maintenance:
 The maintenance stage is the stage where we fix bugs and make improvements to the program.This is also where it is most expensive to correct errors. 
