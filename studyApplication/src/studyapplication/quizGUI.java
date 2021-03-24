@@ -129,6 +129,12 @@ ArrayList<Integer> correctIndex = new ArrayList();
                         .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 178, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(option2)
+                            .addComponent(option3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(feedback, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31))
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(feedback, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(123, 123, 123))
@@ -235,9 +241,52 @@ ArrayList<Integer> correctIndex = new ArrayList();
         }
         
         else{
+            String topic = "";
+            String uml = "UML";
+            String waterfallModel = "Waterfall Model";
+            String sWaterfallModel = "Stages of the Waterfall Model";
+            String sdlc = "SDLC";
             if(questionIndex == 0){
-                feedback.setText("That is incorrect. Please review the Gantt Chart from the notes" );
+                topic = "Gantt Chart";
             }
+            
+            else if(questionIndex == 1){
+                topic = "UML";
+            }
+            
+            else if(questionIndex == 2){
+                topic = "Waterfall Model";
+                
+            }
+            
+            else if(questionIndex == 3){
+                topic = "Stages of the Waterfall Model";
+            }
+            
+            else if(questionIndex == 4){
+                topic = "SDLC";
+            }
+            
+            else if(questionIndex ==5 ){
+                topic = "Stages of the Waterfall Model";
+            }
+            
+            else if(questionIndex == 6){
+                topic = "Stages of the Waterfall Model";
+            }
+            
+            else if(questionIndex == 7){
+                topic = "Stages of the Waterfall Model";
+            }
+            
+            else if(questionIndex == 8){
+                topic = "Stages of the Waterfall Model";
+            }
+            
+            else if(questionIndex == 9){
+                topic = "Stages of the Waterfall Model";
+            }
+             feedback.setText("That is incorrect. Please review the " + topic + " from the notes" );
         }
         
         //if correct. Feedback: Correct! Well Done!
