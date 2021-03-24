@@ -39,7 +39,7 @@ public class StartingMenu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnNotes.setForeground(new java.awt.Color(102, 102, 255));
-        btnNotes.setText("Review Notes");
+        btnNotes.setText("Study Material");
         btnNotes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNotesActionPerformed(evt);
