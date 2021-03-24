@@ -112,6 +112,11 @@ ArrayList<Integer> correctIndex = new ArrayList();
         });
 
         confirmBTN.setText("Confirm");
+        confirmBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -204,6 +209,13 @@ ArrayList<Integer> correctIndex = new ArrayList();
         questionIndex++;
         change(questionIndex);
     }//GEN-LAST:event_nextBTNActionPerformed
+
+    private void confirmBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmBTNActionPerformed
+        //If the confirm button is pressed, give feedback and tell user whether they got the answer right or wrong
+        
+        //if correct. Feedback: Correct! Well Done!
+        //if incorrect. Feedback: That was incorrect. Please review *the specific material* from the notes
+    }//GEN-LAST:event_confirmBTNActionPerformed
 
     /**
      * @param args the command line arguments
